@@ -12,7 +12,7 @@ app.route('/').get((req,res)=>{
     res.end("hello")
 })
 
-app.listen(3000, function()
+app.listen(process.env.PORT || 3001, '0.0.0.0', function()
 {
 	console.log("server is live")
 })
