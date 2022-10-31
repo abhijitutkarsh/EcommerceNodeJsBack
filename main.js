@@ -9,7 +9,7 @@ app.use(cors());
 
 
 app.route('/').get((req,res)=>{
-    res.json("hello")
+    res.end("hello")
 })
 
 app.listen(3000, function()
