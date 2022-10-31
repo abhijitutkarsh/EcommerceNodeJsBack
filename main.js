@@ -9,7 +9,7 @@ app.use(cors());
 
 
 app.route('/').get((req,res)=>{
-    res.end("hello")
+    res.json("hello")
 })
 
 app.listen(process.env.PORT || 3001, '0.0.0.0', function()
