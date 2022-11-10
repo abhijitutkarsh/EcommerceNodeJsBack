@@ -43,7 +43,7 @@ app.use(session({
 	key: "userId",
 	secret: 'keyboard cat',
   resave: false,
-  saveUninitialized: false,
+  saveUninitialized: true,
   cookie: { secure: false }
 }))
 
