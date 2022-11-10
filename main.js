@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 // app.use(cors({origin:'http://localhost:3001', credentials : true}));
 app.use(
   cors({
-    origin: ["https://ecommerce370001.herokuapp.com/"],
+    origin: ["https://ecommerce370001.herokuapp.com"],
     methods: ["GET", "POST"],
     credentials: true,
   })
@@ -29,7 +29,7 @@ app.use(
 
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.set('trust proxy')
+// app.set('trust proxy')
 // app.use(function (req, res, next) {
 //   res.header("Access-Control-Allow-Credentials", true);
 //   res.header("Access-Control-Allow-Origin", req.headers.origin);
@@ -43,7 +43,7 @@ app.set('trust proxy')
 app.use(
   session({
     key: "userId",
-	proxy: true,
+	// proxy: true,
     secret: "keyboard cat",
     resave: false,
     saveUninitialized: true,
