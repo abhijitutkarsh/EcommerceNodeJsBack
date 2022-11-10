@@ -46,8 +46,8 @@ app.use(
 	// proxy: true,
     secret: "keyboard cat",
     resave: false,
-    saveUninitialized: true,
-    cookie: { secure: true },
+    saveUninitialized: false,
+    cookie: { secure: false },
   })
 );
 
