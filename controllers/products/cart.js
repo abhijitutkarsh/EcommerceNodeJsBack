@@ -9,26 +9,21 @@ module.exports = async function(req, res)
     // const username = req.session.user.username;
 
 // console.log(user)
-    const user = req.session.user;
-    const username = req.session.user.username;
-// console.log(username);
+    // const user = req.session.user;
+    const email = req.body.email;
+// console.log(email);
 const body = {
-    user: user,
-    username:username,
+    email:email,
     cartId : u
 }   
-
-   try{
+try{
+    // console.log(body)
     const data = await addToCart(body);
-    const data1 = await getAllProducts();
-    const data3 = await getCart(body);
+    // const data1 = await getAllProducts();
+    // const data3 = await getCart(body);
 
-    // console.log(data.cartId)
-
-    // res.render("home", {cart : data3 , products: data1 ,username: username, user: user});
     
-    // res.render("myCart", {data3: data3, cart:data4.length,product: data4});
-    res.json(data3);
+    res.json("done");
    }
    catch(err){
     res.json("Error here")

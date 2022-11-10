@@ -2,8 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const cartsSchema = new Schema({
-  user: String,
-  username:String,
+  email:String,
   cartId: String
 });
 

@@ -1,4 +1,4 @@
-const ProductModel = require("../../database/models/products")
+const cartModel = require("../../database/models/cart")
 
 module.exports = async function(id)
 {
@@ -10,8 +10,13 @@ module.exports = async function(id)
     // {
         // console.log(i);
     //    return await cartModel.count();
-      const prod =   await ProductModel.findByIdAndDelete({_id : id});
-      // console.log(prod)
+   await cartModel.findByIdAndRemove({_id: id}, function(err,data)
+    {
+        if(!err){
+            console.log("Deleted");
+        }
+    });
+    //   console.log(id+ 'hello')
       return
        
   

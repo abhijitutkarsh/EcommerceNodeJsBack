@@ -11,7 +11,7 @@ module.exports = async function(id)
         // console.log(i);
   //  const updatedUser =  await UserModel.create(user);
       
-      //  console.log(id);
+       console.log(id);
      const updatedCart =  await cartModel.create(id);
 
   // console.log(updatedCart);

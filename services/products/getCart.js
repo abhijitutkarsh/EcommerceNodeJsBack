@@ -10,7 +10,7 @@ module.exports = async function(user)
     // {
         // console.log(i);
     //    return await cartModel.count();
-      return  await cartModel.find({username : user}).count();
+      return  await cartModel.find({email : user}).count();
        
   
 }
