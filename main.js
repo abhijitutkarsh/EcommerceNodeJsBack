@@ -21,7 +21,8 @@ app.use(express.urlencoded({ extended: true }));
 // app.use(cors({origin:'http://localhost:3001', credentials : true}));
 app.use(
   cors({
-    origin: ["https://ecommerce370001.herokuapp.com"],
+    // origin: ["https://ecommerce370001.herokuapp.com"],
+	origin:'http://localhost:3000', 
     methods: ["GET", "POST"],
     credentials: true,
   })
@@ -44,10 +45,18 @@ app.use(
   session({
     key: "userId",
 	// proxy: true,
-    secret: "keyboard cat",
+    // secret: "keyboard cat",
+    // resave: false,
+    // saveUninitialized: false,
+    // cookie: { secure: false },
+	secret: 'street',
     resave: false,
-    saveUninitialized: false,
-    cookie: { secure: false },
+    saveUninitialized: true,
+    proxy: true,
+    cookie: {
+        // sameSite:'none',
+        secure:false
+    }
   })
 );
 
