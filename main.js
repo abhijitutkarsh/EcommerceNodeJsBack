@@ -30,7 +30,7 @@ app.use(
 
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.set('trust proxy')
+
 // app.use(function (req, res, next) {
 //   res.header("Access-Control-Allow-Credentials", true);
 //   res.header("Access-Control-Allow-Origin", req.headers.origin);
@@ -41,6 +41,7 @@ app.set('trust proxy')
 //   );
 //   next();
 // });
+app.enable('trust proxy');
 app.use(
   session({
     key: "userId",
@@ -49,7 +50,7 @@ app.use(
     resave: false,
     saveUninitialized: false,
     cookie: { 
-		sameSite:'none',
+		// sameSite:'none',
 		secure: false }
 	// secret: 'street',
     // resave: false,
