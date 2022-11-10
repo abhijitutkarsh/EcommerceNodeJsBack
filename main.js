@@ -30,7 +30,7 @@ app.use(
 
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
-// app.set('trust proxy')
+app.set('trust proxy')
 // app.use(function (req, res, next) {
 //   res.header("Access-Control-Allow-Credentials", true);
 //   res.header("Access-Control-Allow-Origin", req.headers.origin);
@@ -44,19 +44,19 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   session({
     key: "userId",
-	// proxy: true,
-    // secret: "keyboard cat",
-    // resave: false,
-    // saveUninitialized: false,
-    // cookie: { secure: false },
-	secret: 'street',
+	proxy: true,
+    secret: "keyboard cat",
     resave: false,
-    saveUninitialized: true,
-    proxy: true,
-    cookie: {
-        // sameSite:'none',
-        secure:false
-    }
+    saveUninitialized: false,
+    cookie: { secure: false }
+	// secret: 'street',
+    // resave: false,
+    // saveUninitialized: true,
+    // proxy: true,
+    // cookie: {
+    //     // sameSite:'none',
+    //     secure:false
+    // }
   })
 );
 
@@ -102,7 +102,7 @@ app
       res.send({ isLoggedIn: true, user: req.session.user });
     else res.send({ isLoggedIn: false });
 
-    // console.log(req.session)
+    console.log(req.session)
   })
 
   .post(function (req, res) {
