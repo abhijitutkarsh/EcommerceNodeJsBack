@@ -34,9 +34,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(session({
 	key: "userId",
-    secret: 'keyboard cat',
-    resave: false,
-    saveUninitialized: false
+	secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: false,
+  cookie: { secure: false }
 }))
 
 startDb(); 
