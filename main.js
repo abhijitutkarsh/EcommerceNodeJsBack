@@ -70,7 +70,7 @@ app.route("/signup")
 
 app.get("/logout", function(req, res)
 {
-	// console.log("destroyed")
+	console.log("destroyed")
 	req.session.destroy();
 	res.json(
 		"loggedOut"
@@ -81,7 +81,7 @@ app.get("/logout", function(req, res)
 
 
 app.route("/login").get((req,res)=> {
-	// console.log(req.session)	
+	console.log(req.session)	
 	if(req.session.isLoggedIn)
 res.send({isLoggedIn: true , user: req.session.user})
 else
@@ -103,7 +103,7 @@ res.send({isLoggedIn:false})
 			// req.session.name = user[0].firstname;
 			req.session.user = user[0];
 			
-// console.log(req.session)
+console.log(req.session)
 
             res.json(req.session);
 		}
@@ -129,7 +129,7 @@ function getUser(username, password, callback)
 
 app.route('/session').get((req,res)=>
 {
-    // console.log(req.session);
+    console.log(req.session);
     res.json(req.session)
 })
 
