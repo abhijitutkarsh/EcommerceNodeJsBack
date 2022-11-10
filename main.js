@@ -48,7 +48,9 @@ app.use(
     secret: "keyboard cat",
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: false }
+    cookie: { 
+		sameSite:'none',
+		secure: false }
 	// secret: 'street',
     // resave: false,
     // saveUninitialized: true,
