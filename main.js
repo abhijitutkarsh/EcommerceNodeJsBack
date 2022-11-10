@@ -31,7 +31,7 @@ app.use(cors({
 
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended: true}));
-
+app.set('trust proxy', 1)
 app.use(session({
 	key: "userId",
 	secret: 'keyboard cat',
