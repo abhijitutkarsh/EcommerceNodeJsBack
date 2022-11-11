@@ -9,15 +9,13 @@ module.exports = async function(req, res)
     // }
     
 
-    const body = {
-    id: req.body.productId
-}   
-console.log(body.id)
+   const id =  req.body.productId
+
     
-// console.log(user)
+console.log(id)
 
    try{
-    const data = await ProductModel.find({_id: body.id})
+    const data = await ProductModel.find({_id: id})
 
     res.json(data)
     
