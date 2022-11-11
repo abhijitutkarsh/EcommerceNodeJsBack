@@ -12,7 +12,7 @@ module.exports = async function(req, res)
     const body = {
     id: req.body.productId
 }   
-
+console.log(body.id)
     
 // console.log(user)
 
