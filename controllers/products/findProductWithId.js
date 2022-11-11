@@ -1,4 +1,4 @@
-const getAllProducts = require("../../services/products/getAllProducts");
+// const getAllProducts = require("../../services/products/getAllProducts");
 const ProductModel = require("../../database/models/products")
 
 module.exports = async function(req, res)
@@ -17,12 +17,12 @@ module.exports = async function(req, res)
 // console.log(user)
 
    try{
-    const data = await ProductModel.find({_id: id})
+    const data = await ProductModel.find({_id: body.id})
 
     res.json(data)
     
    }
    catch(err){
-    res.json("Error on getAllProduct")
+    res.json("Error on getProduct")
    }
 }
