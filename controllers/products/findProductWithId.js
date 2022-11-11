@@ -9,7 +9,7 @@ module.exports = async function(req, res)
     // }
     
 
-   const id =  req.body.productId
+   const id =  req.productId
 
     
 console.log(id)
