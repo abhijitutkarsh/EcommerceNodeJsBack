@@ -71,6 +71,7 @@ const addToCartControllers = require("./controllers/products/cart");
 const cartCountControllers = require("./controllers/products/cartCount");
 const cartDataControllers = require("./controllers/products/cartData");
 const deleteCartDataControllers = require("./controllers/products/deleteCartOne");
+const findProductIdControllers = require("./controllers/products/findProductWithId")
 
 app.route("/").get((req, res) => {
   res.json("hello");
@@ -83,6 +84,8 @@ app.route("/cart").post(addToCartControllers);
 app.route("/cartCount").post(cartCountControllers);
 
 app.route("/cartdata").post(cartDataControllers);
+
+app.route("/productid").post(findProductIdControllers)
 
 app
   .route("/product")
