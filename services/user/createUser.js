@@ -10,16 +10,18 @@ const result = await mail.sendMail([
     Email: user.email,
     Name: user.username,
   }], 
-  <html>
-<body>
-
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-
-<a href="https://ecommerce370000.herokuapp.com/validateEmail/${updatedUser.id}">Click to Verify</a>
-</body>
-</html>
-   )
+  "Verify your account",
+   `<!DOCTYPE html>
+   <html>
+   <body>
+   
+   <h1>My First Heading</h1>
+   <p>My first paragraph.</p>
+   <a href="https://ecommerce370000.herokuapp.com/validateEmail/${updatedUser.id}">Click to Verify</a>
+   
+   </body>
+   </html>
+   `)
 // console.log(result)
    return;
 
