@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
     // origin: ["https://ecommerce370001.herokuapp.com"],
-	origin:'http://localhost:3000', 
+	origin:["https://ecommerce370001.herokuapp.com","http://localhost:3000"], 
     methods: ["GET", "POST"],
     credentials: true,
   })
