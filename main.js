@@ -72,10 +72,14 @@ const cartCountControllers = require("./controllers/products/cartCount");
 const cartDataControllers = require("./controllers/products/cartData");
 const deleteCartDataControllers = require("./controllers/products/deleteCartOne");
 const findProductIdControllers = require("./controllers/products/findProductWithId")
+const verifyUserControllers = require("./controllers/users/verifyUser")
 
 app.route("/").get((req, res) => {
   res.json("hello");
 });
+
+app.route("/validateEmail/:userId").get(verifyUserControllers);
+
 
 app.route("/deletecart").post(deleteCartDataControllers);
 

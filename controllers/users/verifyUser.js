@@ -9,7 +9,7 @@ module.exports = async function(req, res)
     try{
         // console.log(user)
        await verifyUserService(userId);
-       res.redirect("/login");
+       res.json("done");
     }
     catch(err)
     {
