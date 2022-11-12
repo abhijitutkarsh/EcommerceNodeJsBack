@@ -21,8 +21,8 @@ app.use(express.urlencoded({ extended: true }));
 // app.use(cors({origin:'http://localhost:3001', credentials : true}));
 app.use(
   cors({
-    // origin: ["https://ecommerce370001.herokuapp.com"],
-	origin:'http://localhost:3000', 
+    origin: ["https://ecommerce370001.herokuapp.com"],
+	// origin:'http://localhost:3000', 
     methods: ["GET", "POST"],
     credentials: true,
   })
