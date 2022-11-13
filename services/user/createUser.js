@@ -13,7 +13,6 @@ const result = await mail.sendMail([
   "Verify your account",
    `<!DOCTYPE html>
    <html>
-   <body>
    
    <style>
     
@@ -230,6 +229,7 @@ const result = await mail.sendMail([
        background-color: #34495e !important;
        border-color: #34495e !important; } }
  </style>
+ <body>
 
  <table border="0" cellpadding="0" cellspacing="0" class="body">
    <tr>
