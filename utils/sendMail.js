@@ -1,8 +1,8 @@
 const Mailjet = require('node-mailjet')
 
 const mailjet = new Mailjet({
-    apiKey:"ba3d9847ce5f926cdbf1a61ce5c2d576",
-    apiSecret:"b545917f7d4a098c4dce4a7fba32e95f"
+    apiKey:"3fb1d12aa403614ca84137273874e455",
+    apiSecret:"4123faa4bd4de7de0514131ac2f365b1"
 })
 module.exports.sendMail = async function(email,subject, body){
 
