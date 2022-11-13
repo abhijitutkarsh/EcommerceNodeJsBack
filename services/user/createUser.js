@@ -229,6 +229,7 @@ const result = await mail.sendMail([
        background-color: #34495e !important;
        border-color: #34495e !important; } }
  </style>
+
  <body>
 
  <table border="0" cellpadding="0" cellspacing="0" class="body">
@@ -244,9 +245,9 @@ const result = await mail.sendMail([
                <table border="0" cellpadding="0" cellspacing="0">
                  <tr>
                    <td>
-                     <h1>   <a href="https://ecommerce370000.herokuapp.com/validateEmail/${updatedUser.id}">Click to Verify</a>
+                     <h1><a href="https://ecommerce370000.herokuapp.com/validateEmail/${updatedUser.id}">Click to Verify</a>
                      </h1>
-                     <h2>You are just one step away</h2>
+                     <h2>You are just 1 step away</h2>
                      <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
                        <tbody>
                          <tr>
