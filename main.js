@@ -52,14 +52,14 @@ app.use(
     cookie: { 
 		sameSite:'none',
 		secure: true },
-	secret: 'street',
-    resave: false,
-    saveUninitialized: true,
-    proxy: true,
-    cookie: {
-        // sameSite:'none',
-        secure:false
-    }
+	// secret: 'street',
+  //   resave: false,
+  //   saveUninitialized: true,
+  //   proxy: true,
+  //   cookie: {
+  //       // sameSite:'none',
+  //       secure:true
+  //   }
   })
 );
 
