@@ -16,7 +16,7 @@ module.exports = async function(req, res)
     try{
        await createUserService(user);
     //    console.log("done")
-        res.json("");
+        // res.json("");
     }
     catch(err)
     {

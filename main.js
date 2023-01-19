@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
     // origin: ["https://ecommerce370001.herokuapp.com"],
-	origin:["https://ecommerce370001.herokuapp.com","http://localhost:3000"], 
+	origin:["http://localhost:3000","https://ecommercereact.onrender.com"], 
     methods: ["GET", "POST"],
     credentials: true,
   })
@@ -31,16 +31,16 @@ app.use(
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// app.use(function (req, res, next) {
-//   res.header("Access-Control-Allow-Credentials", true);
-//   res.header("Access-Control-Allow-Origin", req.headers.origin);
-//   res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
-//   res.header(
-//     "Access-Control-Allow-Headers",
-//     "X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept"
-//   );
-//   next();
-// });
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Credentials", true);
+  res.header("Access-Control-Allow-Origin", req.headers.origin);
+  res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept"
+  );
+  next();
+});
 app.enable('trust proxy');
 app.use(
   session({
@@ -51,15 +51,15 @@ app.use(
     saveUninitialized: false,
     cookie: { 
 		sameSite:'none',
-		secure: true }
-	// secret: 'street',
-    // resave: false,
-    // saveUninitialized: true,
-    // proxy: true,
-    // cookie: {
-    //     // sameSite:'none',
-    //     secure:false
-    // }
+		secure: true },
+	secret: 'street',
+    resave: false,
+    saveUninitialized: true,
+    proxy: true,
+    cookie: {
+        // sameSite:'none',
+        secure:false
+    }
   })
 );
 
